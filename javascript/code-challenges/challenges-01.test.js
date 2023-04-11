@@ -129,7 +129,7 @@ const createList = (availableItems) => {
   // Solution code here...
   let groceryList = [];
   availableItems.forEach(item => {
-    if (item.available === true) {
+    if (item.available) {
       groceryList.push(item.name);
     }
   });
