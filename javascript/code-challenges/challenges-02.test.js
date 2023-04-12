@@ -62,8 +62,13 @@ const forLoopTwoToThe = (arr) => {
   // Solution code here...
   let newArray =[];
 
-  for (let i = 0; i < arr.length; i++) {
-    let newValue = Math.pow(2, arr[i]);
+  // for (let i = 0; i < arr.length; i++) {
+  //   let newValue = Math.pow(2, arr[i]);
+  //   newArray.push(newValue);
+  // }
+
+  for (let num of arr) {
+    let newValue = Math.pow(2, num);
     newArray.push(newValue);
   }
 
