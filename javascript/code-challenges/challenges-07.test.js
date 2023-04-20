@@ -135,9 +135,9 @@ const listFoods = (recipe) => {
   // Solution code here...
   let ingredients = recipe.ingredients;
   ingredients.forEach(ingredient => {
-    let firstTrim = ingredient.slice(ingredient.indexOf(' ') + 1)
-    let finalTrim = firstTrim.slice(firstTrim.indexOf(' ') + 1)
-    result.push(finalTrim)
+    let firstTrim = ingredient.slice(ingredient.indexOf(' ') + 1);
+    let finalTrim = firstTrim.slice(firstTrim.indexOf(' ') + 1);
+    result.push(finalTrim);
   });
   return result;
 };
