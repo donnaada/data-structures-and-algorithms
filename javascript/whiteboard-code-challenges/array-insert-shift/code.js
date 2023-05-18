@@ -1,12 +1,6 @@
-# Challenge Title: Array Binary Search
+let array = [1, 3, 5, 7,11,13,17,19,23, 29,31,37,41,43,47,54,59];
+let search = 23;
 
-## Whiteboard Process
-
-![Array Insert Shift Whiteboard](./whiteboard-array-binary-search.png)
-
-## Solution
-
-``` js
 function BinarySearch(arr, key){
 
   let low = 0;
@@ -28,10 +22,9 @@ function BinarySearch(arr, key){
   if (low > high){
     return -1;
   }
+
 }
 
-let sortedArray = [1, 3, 5, 7,11,13,17,19,23, 29,31,37,41,43,47,54,59]
-let search = 23
-console.log(BinarySearch(sortedArray,search)); // returns 8
 
-```
+
+console.log(BinarySearch(array,search));
