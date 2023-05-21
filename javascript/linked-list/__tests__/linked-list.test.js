@@ -11,7 +11,7 @@ describe('Linked List', () => {
     expect(list.head).toBeNull();
   });
 
-  test('Can inster into linked list', () => {
+  test('Can insert into linked list', () => {
     let list = new LinkedList();
     list.insert(1);
     expect(list.head.value).toEqual(1);
