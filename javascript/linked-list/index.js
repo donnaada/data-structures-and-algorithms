@@ -4,7 +4,6 @@ class Node {
   constructor(value){
     this.value = value;
     this.next = null;
-
   }
 }
 class LinkedList {
@@ -31,7 +30,6 @@ class LinkedList {
     }
     current.next = node;
   }
-
 
   includes(value){
     let isInNode = false;
