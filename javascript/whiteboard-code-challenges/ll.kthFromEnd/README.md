@@ -1,8 +1,16 @@
 # Challenge Title: Linked List kthFromEnd
 
+## Whiteboard
+
+![Whiteboard Process](./kthFromEnd.png)
+
 ## Approach & Efficiency
 
 Linked List implementation build based on class class lecture.
+
+## Pair Programming
+
+Whiteboard Pair Programming with [Ryan Eastman](https://github.com/DocHolliday13x)
 
 ## Tests
 
