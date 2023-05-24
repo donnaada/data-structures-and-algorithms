@@ -62,3 +62,60 @@ describe('Linked List', () => {
     expect(list.includes('dinosaur')).toEqual(true);
   });
 });
+
+describe('Testing Linked List - kthFromEnd() Method', () => {
+  test('Where k is greater than the length of the linked list', () => {
+    const list = new LinkedList();
+    list.append(1);
+    list.append(2);
+    list.append(3);
+
+    expect(list.kthFromEnd(4)).toBeNull();
+  });
+
+  test('Where K and the Length of the List are the Same', () => {
+    const list = new LinkedList();
+    list.append(1);
+    list.append(2);
+    list.append(3);
+
+    expect(list.kthFromEnd(3)).toBeNull;
+  });
+
+  test('Where k and the length of the list are the same', () => {
+    const list = new LinkedList();
+    list.append(1);
+    list.append(2);
+    list.append(3);
+
+    expect(list.kthFromEnd(2)).toBe(1);
+  });
+
+  test('Where k is not a positive integer', () => {
+    const list = new LinkedList();
+    list.append(1);
+    list.append(2);
+    list.append(3);
+
+    expect(list.kthFromEnd(-1)).toBeNull();
+  });
+
+  test('Where the linked list is of size 1', () => {
+    const list = new LinkedList();
+    list.append(1);
+
+    expect(list.kthFromEnd(0)).toBe(1);
+  });
+
+  test('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list', () => {
+    const list = new LinkedList();
+    list.append(1);
+    list.append(2);
+    list.append(3);
+    list.append(4);
+    list.append(5);
+
+    expect(list.kthFromEnd(2)).toBe(3);
+  });
+
+});
