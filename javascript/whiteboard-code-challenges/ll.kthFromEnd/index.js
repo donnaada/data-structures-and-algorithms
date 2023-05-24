@@ -58,8 +58,25 @@ class LinkedList {
   }
 
   kthFromEnd(k){
+    if (!this.head) return null;
+    if (k < 0) return null;
+
+    let runner = this.head;
     let current = this.head;
-    let is
+
+    for (let i = 0; i < k; i++){
+      if(i < k){
+        if(!runner.next) return null;
+        runner = runner.next;
+      }
+    }
+
+    while(runner.next){
+      runner = runner.next;
+      current = current.next;
+    }
+
+    return current.value;
   }
 
   traversal(){
