@@ -1,9 +1,5 @@
 # Challenge Title: Extend a Linked List to allow various insertion methods
 
-## Whiteboard Process
-
-![Sum Array](./whiteboard-interview-1-matrix.png)
-
 ## Approach & Efficiency
 
 Linked List implementation build based on class class lecture.
