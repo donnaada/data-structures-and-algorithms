@@ -8,8 +8,13 @@
 - Create a Stack class that has a top property. It creates an empty Stack when instantiated.
 - Create a Queue class that has a front property. It creates an empty Queue when instantiated.
 
+### Challenge 11
+
+- Implement a queue using two stacks
+
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
+
+![Pseudo Queue Whiteboard](./pseudoQueue.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
@@ -37,6 +42,15 @@
 - Can successfully empty a queue after multiple dequeues
 - Can successfully instantiate an empty queue
 - Calling dequeue or peek on empty queue raises exception
+
+### Challenge 11 Tests
+
+- Can successfully enqueue into a queue
+- Can successfully enqueue multiple values into a queue
+- Can successfully dequeue out of a queue the expected value
+- Can successfully empty a queue after multiple dequeues
+- Can successfully instantiate an empty queue
+- Calling dequeue on empty queue raises exception
 
 ## Solution
 
