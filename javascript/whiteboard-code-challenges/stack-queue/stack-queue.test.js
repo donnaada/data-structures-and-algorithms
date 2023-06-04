@@ -1,6 +1,6 @@
 'use strict';
 
-const { Stack, Queue } = require('./index');
+const { Stack, Queue, PseudoQueue } = require('./index');
 
 
 describe('Stack Tests', () => {
@@ -141,6 +141,69 @@ describe('Queue Tests', () => {
     let queue = new Queue;
 
     expect(queue.peek()).toBeNull();
+    expect(queue.dequeue()).toBeNull();
+  });
+
+});
+
+describe('PseudoQueue Tests', () => {
+  test('Can successfully enqueue into a queue', () => {
+    let queue = new PseudoQueue;
+    queue.enqueue(1);
+    expect(queue.front.value).toEqual(1);
+    expect(queue.back.value).toEqual(1);
+  });
+
+  test('Can successfully enqueue multiple values into a queue', ()=>{
+    // Code Here
+    let queue = new PseudoQueue;
+    queue.enqueue(1);
+    queue.enqueue(2);
+    queue.enqueue(3);
+
+    expect(queue.front.value).toEqual(1);
+    expect(queue.front.next.value).toEqual(2);
+    expect(queue.back.value).toEqual(3);
+  });
+
+  test('Can successfully dequeue out of a queue the expected value', ()=>{
+    // Code Here
+    let queue = new PseudoQueue;
+    queue.enqueue(1);
+    queue.enqueue(2);
+    queue.enqueue(3);
+
+    queue.dequeue();
+
+    expect(queue.front.value).toEqual(2);
+
+    queue.dequeue();
+    expect(queue.front.value).toEqual(3);
+  });
+
+  test('Can successfully empty a queue after multiple dequeues', ()=>{
+    // Code Here
+    let queue = new PseudoQueue;
+    queue.enqueue(1);
+    queue.enqueue(2);
+
+    queue.dequeue();
+    queue.dequeue();
+
+    expect(queue.front).toBeNull();
+  });
+
+  test('Can successfully instantiate an empty queue', ()=>{
+    // Code Here
+    let queue = new PseudoQueue;
+
+    expect(queue.front).toBeNull();
+  });
+
+  test('Calling dequeue empty queue raises exception', ()=>{
+    // Code Here
+    let queue = new PseudoQueue;
+
     expect(queue.dequeue()).toBeNull();
   });
 

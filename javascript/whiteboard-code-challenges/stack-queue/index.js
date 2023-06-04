@@ -75,8 +75,36 @@ class Queue {
   }
 }
 
+class PseudoQueue{
+  constructor(){
+    this.front = null;
+    this.back = null;
+  }
+
+  enqueue(value){
+    let newNode = new Node(value);
+    if (this.front){
+      this.back.next = newNode;
+    } else {
+      this.front = newNode;
+    }
+    this.back = newNode;
+  }
+
+  dequeue(){
+    let dequeuedItem = null;
+    if (this.front){
+      dequeuedItem = this.front.value;
+      if (this.front === this.back) this.back = null;
+      this.front = this.front.next;
+    }
+    return dequeuedItem;
+  }
+}
+
 module.exports = {
   Stack,
-  Queue
+  Queue,
+  PseudoQueue
 };
 

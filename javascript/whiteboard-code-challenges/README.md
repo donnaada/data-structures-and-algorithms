@@ -8,3 +8,4 @@
 - [Linked List Insertion](../linked-list-insertion/README.md)
 - [Linked List kth to the End](./ll.kthFromEnd/README.md)
 - [Linked List Zipped](./linked-list-zipped/README.md)
+- [Stack and Queue](./stack-and-queue/README.md)
