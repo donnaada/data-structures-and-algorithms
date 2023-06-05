@@ -11,10 +11,29 @@
 ### Challenge 11
 
 - Implement a queue using two stacks
+- Create a new class called PseudoQueue
+- implement the standard queue interface
+  - enqueue that passes in a value
+  - dequeue that extracts a value
+
+### Challenge 12
+
+- Create a class called AnimalShelter which holds only dogs and cats.
+- Implement the following methods:
+  - Enqueue
+    - `animal` can be either a dog or a cat object.
+    - It must have a `species` property that is either "`cat`" or "`dog`"
+    - It must have a `name` property that is a string.
+  - Dequeue
+    -Arguments: pref
+    - pref can be either "dog" or "cat"
+    - Return: either a dog or a cat, based on preference.
+      - If pref is not "dog" or "cat" then return null.
 
 ## Whiteboard Process
 
 ![Pseudo Queue Whiteboard](./pseudoQueue.png)
+![Animal Shelter Whiteboard](./animalShelter.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
@@ -51,6 +70,15 @@
 - Can successfully empty a queue after multiple dequeues
 - Can successfully instantiate an empty queue
 - Calling dequeue on empty queue raises exception
+
+### Challenge 12 Tests
+
+- Can successfully enqueue dog into the dog queue
+- Can successfully enqueue cat into the cat queue
+- Calling enqueue on any other species raises exception (1 ms)
+- Can successfully dequeue dog into the dog queue
+- Can successfully dequeue cat into the cat queue
+- Calling dequeue on any other preference raises exception
 
 ## Solution
 

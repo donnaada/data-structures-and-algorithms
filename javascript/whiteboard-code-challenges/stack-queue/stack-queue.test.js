@@ -1,6 +1,6 @@
 'use strict';
 
-const { Stack, Queue, PseudoQueue } = require('./index');
+const { Stack, Queue, PseudoQueue, AnimalShelter } = require('./index');
 
 
 describe('Stack Tests', () => {
@@ -206,6 +206,60 @@ describe('PseudoQueue Tests', () => {
 
     expect(queue.dequeue()).toBeNull();
   });
+
+});
+
+
+describe('Animal Shelter Tests', () => {
+  let animalShelter;
+
+  beforeEach(() => {
+    animalShelter = new AnimalShelter();
+  });
+
+  test('Can successfully enqueue dog into the dog queue', () => {
+    animalShelter.enqueue('dog', 'spot');
+    expect(animalShelter.dogQueue.front.value).toEqual('spot');
+  });
+
+  test('Can successfully enqueue cat into the cat queue', () => {
+    animalShelter.enqueue('cat', 'mittens');
+    expect(animalShelter.catQueue.front.value).toEqual('mittens');
+  });
+
+  test('Calling enqueue on any other species raises exception', ()=>{
+    // Code Here
+    let queue = animalShelter.enqueue('fish', 'bubbles');
+
+    expect(queue).toBeNull();
+  });
+
+  test('Can successfully dequeue dog into the dog queue', () => {
+    animalShelter.enqueue('dog', 'spike');
+    animalShelter.enqueue('dog', 'spot');
+    animalShelter.enqueue('dog', 'striker');
+    animalShelter.dequeue('dog');
+    expect(animalShelter.dogQueue.front.value).toEqual('spot');
+  });
+
+  test('Can successfully dequeue cat into the cat queue', () => {
+    animalShelter.enqueue('cat', 'mittens');
+    animalShelter.enqueue('cat', 'muffins');
+    animalShelter.enqueue('cat', 'mischief');
+    animalShelter.enqueue('cat', 'missy');
+    animalShelter.dequeue('cat');
+
+    expect(animalShelter.catQueue.front.value).toEqual('muffins');
+  });
+
+  test('Calling dequeue on any other preference raises exception', ()=>{
+    // Code Here
+    let queue = animalShelter.dequeue('fish', 'bubbles');
+
+    expect(queue).toBeNull();
+  });
+
+
 
 });
 
