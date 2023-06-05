@@ -30,13 +30,20 @@
     - Return: either a dog or a cat, based on preference.
       - If pref is not "dog" or "cat" then return null.
 
+### Challenge 13
+
+- Write a function called validate brackets
+  - Arguments: string
+  - Return: boolean representing whether or not the brackets in the string are balanced
+
 ## Whiteboard Process
 
 ![Pseudo Queue Whiteboard](./pseudoQueue.png)
 ![Animal Shelter Whiteboard](./animalShelter.png)
 
-## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+## Resources
+
+Lecture Notes (Ryan Gallaway's 401d53 Class)
 
 ## Tests
 
@@ -79,6 +86,13 @@
 - Can successfully dequeue dog into the dog queue
 - Can successfully dequeue cat into the cat queue
 - Calling dequeue on any other preference raises exception
+
+### Challenge 13 Tests
+
+- Tests to see if sting is balanced
+- Tests to see if sting is unbalanced
+
+
 
 ## Solution
 

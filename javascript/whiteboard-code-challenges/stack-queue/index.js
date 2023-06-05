@@ -126,11 +126,39 @@ class AnimalShelter {
   }
 }
 
+const isBalanced = (string) =>{
+  let stack = new Stack();
+
+  for (let i = 0; i < string.length; i++){
+    let character = string[i];
+
+    if (character === '{' ||
+        character === '(' ||
+        character === '['){
+      stack.push(character);
+    } else if (character === '}' ||
+        character === ')' ||
+        character === ']'){
+      if (!stack.peek()) return false;
+      let topOfStack = stack.pop();
+      if (topOfStack === '(' && character !== ')' ||
+        topOfStack === '[' && character !== ']'||
+        topOfStack === '{' && character !== '}'
+      ){
+        return false;
+      }
+    }
+  }
+
+  return stack.isEmpty();
+};
+
 
 module.exports = {
   Stack,
   Queue,
   PseudoQueue,
-  AnimalShelter
+  AnimalShelter,
+  isBalanced
 };
 

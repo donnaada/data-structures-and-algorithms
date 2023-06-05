@@ -1,6 +1,6 @@
 'use strict';
 
-const { Stack, Queue, PseudoQueue, AnimalShelter } = require('./index');
+const { Stack, Queue, PseudoQueue, AnimalShelter, isBalanced } = require('./index');
 
 
 describe('Stack Tests', () => {
@@ -259,6 +259,25 @@ describe('Animal Shelter Tests', () => {
     expect(queue).toBeNull();
   });
 
+
+
+});
+
+describe('Test Balanced String', () => {
+  test('Tests to see if sting is balanced', ()=>{
+    let string = '(){}[[]]';
+    expect(isBalanced(string)).toBe(true);
+    string = '{}';
+    expect(isBalanced(string)).toBe(true);
+  });
+
+  test('Tests to see if sting is unbalanced', ()=>{
+    let string = '[({}]';
+    expect(isBalanced(string)).toBe(false);
+
+    string = '}}{Code}[Fellows](())';
+    expect(isBalanced(string)).toBe(false);
+  });
 
 
 });
