@@ -102,9 +102,35 @@ class PseudoQueue{
   }
 }
 
+class AnimalShelter {
+  constructor(){
+    this.catQueue = new Queue();
+    this.dogQueue = new Queue();
+  }
+
+  enqueue(species, name) {
+    // Check if type is not cat or dog
+    if (species !== 'cat' && species !== 'dog') return null;
+    if (species === 'dog') {
+      this.dogQueue.enqueue(name);
+    }
+    if (species === 'cat') {
+      this.catQueue.enqueue(name);
+    }
+  }
+
+  dequeue(pref){
+    if (pref !== 'cat' && pref !== 'dog') return null;
+    if (pref === 'cat') return this.catQueue.dequeue();
+    if (pref === 'dog') return this.dogQueue.dequeue();
+  }
+}
+
+
 module.exports = {
   Stack,
   Queue,
-  PseudoQueue
+  PseudoQueue,
+  AnimalShelter
 };
 

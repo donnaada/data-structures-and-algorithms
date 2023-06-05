@@ -11,6 +11,24 @@
 ### Challenge 11
 
 - Implement a queue using two stacks
+- Create a new class called PseudoQueue
+- implement the standard queue interface
+  - enqueue that passes in a value
+  - dequeue that extracts a value
+
+### Challenge 12
+
+- Create a class called AnimalShelter which holds only dogs and cats.
+- Implement the following methods:
+  - Enqueue
+    - `animal` can be either a dog or a cat object.
+    - It must have a `species` property that is either "`cat`" or "`dog`"
+    - It must have a `name` property that is a string.
+  - Dequeue
+    -Arguments: pref
+    - pref can be either "dog" or "cat"
+    - Return: either a dog or a cat, based on preference.
+      - If pref is not "dog" or "cat" then return null.
 
 ## Whiteboard Process
 
