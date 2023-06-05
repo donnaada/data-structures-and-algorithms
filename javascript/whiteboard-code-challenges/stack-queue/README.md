@@ -33,6 +33,7 @@
 ## Whiteboard Process
 
 ![Pseudo Queue Whiteboard](./pseudoQueue.png)
+![Animal Shelter Whiteboard](./animalShelter.png)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
@@ -69,6 +70,15 @@
 - Can successfully empty a queue after multiple dequeues
 - Can successfully instantiate an empty queue
 - Calling dequeue on empty queue raises exception
+
+### Challenge 12 Tests
+
+- Can successfully enqueue dog into the dog queue
+- Can successfully enqueue cat into the cat queue
+- Calling enqueue on any other species raises exception (1 ms)
+- Can successfully dequeue dog into the dog queue
+- Can successfully dequeue cat into the cat queue
+- Calling dequeue on any other preference raises exception
 
 ## Solution
 
