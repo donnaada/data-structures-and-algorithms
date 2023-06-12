@@ -3,7 +3,14 @@
 const { BinaryTree, Node, BinarySearchTree } = require('./index.js');
 
 describe('Testing Binary Trees', () => {
-  test('Should create new Tree', ()=>{
+  test('Can instantiate an empty tree', ()=>{
+    // Code Here
+    let tree = new BinaryTree();
+
+    expect(tree.root).toBeNull();
+
+  });
+  test('Can successfully instantiate a tree with a single root node', ()=>{
     // Code Here
     let tree = new BinaryTree();
     tree.root = new Node(20);
@@ -14,7 +21,7 @@ describe('Testing Binary Trees', () => {
 
   });
 
-  test('Should be able to add to binary search tree', ()=>{
+  test('can successfully add a left child and right child properly to a node', ()=>{
     // Code Here
     let tree = new BinarySearchTree();
     tree.add(20);
