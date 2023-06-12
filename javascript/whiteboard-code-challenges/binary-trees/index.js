@@ -123,8 +123,28 @@ class BinarySearchTree extends BinaryTree {
   }
 }
 
+const breadthFirst = (tree) => {
+  const results = [];
+  const treeValue = [tree];
+
+  while (treeValue.length > 0) {
+    const node = treeValue.shift();
+    results.push(node.value);
+
+    if (node.left) {
+      treeValue.push(node.left);
+    }
+    if (node.right) {
+      treeValue.push(node.right);
+    }
+  }
+
+  return results;
+};
+
 module.exports = {
   Node,
   BinaryTree,
-  BinarySearchTree
+  BinarySearchTree,
+  breadthFirst
 };

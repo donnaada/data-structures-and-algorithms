@@ -3,6 +3,7 @@
 ## Whiteboard
 
 ![Find Max Whiteboard](./findMax.png)
+![Breadth First](./breadthFirst.png)
 
 ## Approach & Efficiency
 

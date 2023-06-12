@@ -1,6 +1,6 @@
 'use strict';
 
-const { BinaryTree, Node, BinarySearchTree } = require('./index.js');
+const { BinaryTree, Node, BinarySearchTree, breadthFirst } = require('./index.js');
 
 describe('Testing Binary Trees', () => {
   test('Can instantiate an empty tree', ()=>{
@@ -76,4 +76,23 @@ describe('Testing Binary Trees', () => {
 
     expect(tree.findMax()).toEqual(35);
   });
+
+  test('Testing breadth-first approach', ()=>{
+    // Code Here
+    let tree = new BinaryTree();
+    tree.root = new Node(2);
+    tree.left = new Node(7);
+    tree.right = new Node(5);
+    tree.left.left = new Node(2);
+    tree.left.right = new Node(6);
+    tree.right.right = new Node(9);
+    tree.left.right.left = new Node(5);
+    tree.left.right.right = new Node(11);
+    tree.right.right.left = new Node(4);
+
+
+    expect(breadthFirst(tree)).toEqual([undefined, 7, 5, 2, 6, 9, 5, 11, 4]);
+
+  });
+
 });
