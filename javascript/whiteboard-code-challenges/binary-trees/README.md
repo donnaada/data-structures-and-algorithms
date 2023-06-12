@@ -2,7 +2,7 @@
 
 ## Approach & Efficiency
 
-Linked List implementation build based on class class lecture.
+Linked List implementation build based on class lecture.
 
 ## Solution
 
