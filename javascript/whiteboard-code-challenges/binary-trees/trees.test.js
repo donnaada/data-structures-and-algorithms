@@ -62,4 +62,18 @@ describe('Testing Binary Trees', () => {
 
     expect(tree.postOrder()).toEqual([5, 30, 20]);
   });
+
+  test('Testing max value', ()=>{
+    // Code Here
+    let tree = new BinarySearchTree();
+    tree.add(20);
+    tree.add(5);
+    tree.add(9);
+    tree.add(3);
+    tree.add(30);
+    tree.add(25);
+    tree.add(35);
+
+    expect(tree.findMax()).toEqual(35);
+  });
 });

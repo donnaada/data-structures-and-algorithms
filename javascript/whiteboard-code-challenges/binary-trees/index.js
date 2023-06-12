@@ -74,6 +74,30 @@ class BinaryTree {
     return results;
   }
 
+  //code challenge 16 - finding the maximum value in a binary tree
+  findMax(){
+    let max;
+
+    const traverse = (node) => {
+
+      max = node.value;
+
+      if(node.left) {
+        traverse(node.left);
+        if (node.left.value > max) max = node.left.value;
+      }
+
+      if(node.right){
+        traverse(node.right);
+        if (node.right.value > max) max = node.right.value;
+      }
+    };
+
+    traverse(this.root);
+
+    return max;
+  }
+
 }
 
 class BinarySearchTree extends BinaryTree {
