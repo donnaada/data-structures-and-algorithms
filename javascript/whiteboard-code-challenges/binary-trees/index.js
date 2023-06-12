@@ -76,7 +76,31 @@ class BinaryTree {
 
 }
 
+class BinarySearchTree extends BinaryTree {
+  constructor(){
+    super();
+  }
+
+  add(value){
+    const node = new Node(value);
+
+    const insert = (node, root) => {
+      if(!root){
+        root = node;
+      } else if(node.value < root.value){
+        root.left = insert(node, root.left);
+      } else {
+        root.right = insert(node, root.right);
+      }
+      return root;
+    };
+
+    this.root = insert(node, this.root);
+  }
+}
+
 module.exports = {
   Node,
-  BinaryTree
+  BinaryTree,
+  BinarySearchTree
 };

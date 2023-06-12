@@ -6,6 +6,4 @@ Linked List implementation build based on class class lecture.
 
 ## Solution
 
-``` js
-
-```
+[Link to code with solution](./index.js)
