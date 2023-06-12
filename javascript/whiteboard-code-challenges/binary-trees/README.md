@@ -4,6 +4,7 @@
 
 ![Find Max Whiteboard](./findMax.png)
 ![Breadth First](./breadthFirst.png)
+![FizzBuzz Tree](./fizzBuzz.png)
 
 ## Approach & Efficiency
 

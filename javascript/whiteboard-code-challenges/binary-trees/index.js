@@ -98,6 +98,25 @@ class BinaryTree {
     return max;
   }
 
+  fizzBuzzTree(node){
+
+    let newTree = new Node();
+
+    if(node % 15){
+      newTree.value = 'FizzBuzz';
+    } else if(node % 5){
+      newTree.value = 'Buzz';
+    } else if(node % 3){
+      newTree.value = 'Fizz';
+    } else {
+      newTree.value = node.value;
+    }
+
+    newTree.left = this.fizzBuzzTree(node.left);
+    newTree.right = this.fizzBuzzTree(node.right);
+
+    return newTree;
+  }
 }
 
 class BinarySearchTree extends BinaryTree {
@@ -141,6 +160,12 @@ const breadthFirst = (tree) => {
 
   return results;
 };
+
+
+
+
+
+
 
 module.exports = {
   Node,
