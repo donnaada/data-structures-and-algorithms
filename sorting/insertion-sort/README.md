@@ -76,19 +76,19 @@ __SAMPLE ARRAY__: [ 8, 4, 23, 42, 16, 15]
 
     > newArr = [ 4, 8 ]
 
-1. In the second iteration, we pass the value of 23. We then compare it to the values in the sorted array `newArr` and ensure it is in the current position.
+1. In the second iteration, we pass the value of 23. We then compare it to the values in the sorted array `newArr` and ensure it is in the correct position.
 
     > newArr = [ 4, 8, 23 ]
 
-1. In the third iteration, we pass the value of 42. We then compare it to the values in the sorted array `newArr` and ensure it is in the current position.
+1. In the third iteration, we pass the value of 42. We then compare it to the values in the sorted array `newArr` and ensure it is in the correct position.
 
     > newArr = [ 4, 8, 23, 42 ]
 
-1. In the fourth iteration, we pass the value of 16. We then compare it to the values in the sorted array `newArr` and ensure it is in the current position.
+1. In the fourth iteration, we pass the value of 16. We then compare it to the values in the sorted array `newArr` and ensure it is in the correct position.
 
     > newArr = [ 4, 8, 16, 23, 42 ]
 
-1. In the final iteration, we pass the value of 15. We then compare it to the values in the sorted array `newArr` and ensure it is in the current position.
+1. In the final iteration, we pass the value of 15. We then compare it to the values in the sorted array `newArr` and ensure it is in the correct position.
 
     > newArr = [ 4, 8, 15, 16, 23, 42 ]
 

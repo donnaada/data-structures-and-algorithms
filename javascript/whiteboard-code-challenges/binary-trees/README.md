@@ -5,6 +5,7 @@
 ![Find Max Whiteboard](./findMax.png)
 ![Breadth First](./breadthFirst.png)
 ![FizzBuzz Tree](./fizzBuzz.png)
+![sumOddNumbers](./codeChallenge29-Trees.png)
 
 ## Approach & Efficiency
 
