@@ -50,12 +50,26 @@ describe('HashTable Tests', () => {
     expect(table.hash('Donna')).toBeLessThan(1024);
   });
 
+
+
+});
+
+describe('Tests repeating words ', () => {
+
   test('Checks for first repeated word in string', ()=>{
     // Code Here
     let str = 'Once upon a time, there was a brave princess who...';
+    str = str.toLowerCase();
     expect(isRepeated(str)).toEqual('a');
   });
-});
 
+  test('Test 2 to check for first repeated word in string', ()=>{
+    // Code Here
+    let str = 'It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn\'t know what I was doing in New York...';
+
+    expect(isRepeated(str)).toEqual('summer');
+  });
+
+});
 
 

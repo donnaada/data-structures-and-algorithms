@@ -49,6 +49,7 @@ class HashTable{
 
 const isRepeated = (str) => {
   let hash = new HashTable(1024);
+  str = str.toLowerCase().replace(/[^A-Za-z0-9\s]/gm,'');
   let arr = str.split(' ');
 
   for(let i = 0; i < arr.length; i++){
