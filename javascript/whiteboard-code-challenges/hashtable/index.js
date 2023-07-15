@@ -1,6 +1,6 @@
 'use strict';
 
-class Hashtable{
+class HashTable{
   constructor(size){
     this.size = size;
     this.bucket = new Array(size);
@@ -43,6 +43,24 @@ class Hashtable{
     let hashKey = (hash * 599) % this.size;
     return hashKey;
   }
+
+
 }
 
-module.exports = { Hashtable };
+const isRepeated = (str) => {
+  let hash = new HashTable(1024);
+  let arr = str.split(' ');
+
+  for(let i = 0; i < arr.length; i++){
+    if(!hash.get(arr[i])){
+      hash.set(arr[i], i);
+    } else {
+      return arr[i];
+    }
+  }
+
+};
+
+
+
+module.exports = { HashTable, isRepeated };
