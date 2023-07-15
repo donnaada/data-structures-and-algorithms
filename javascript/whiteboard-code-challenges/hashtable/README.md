@@ -47,3 +47,6 @@ Lecture Notes (Ryan Gallaway's 401d53 Class)
 ## Solution
 
 [Hash Table Code](./index.js)
+
+## Whiteboard
+![Challenge 31](./cc31.png)
