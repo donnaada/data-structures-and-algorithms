@@ -31,6 +31,13 @@ const segregate = (arr) => {
   results = [...even, ...odd];
   return results;
 
-}
+};
 
-module.exports = { reverseList, segregate };
+const printNums = (num) => {
+  if (num > 0){
+    printNums(num - 1);
+    console.log(num);
+  }
+};
+
+module.exports = { reverseList, segregate, printNums };
