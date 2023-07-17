@@ -19,7 +19,7 @@ const tree_intersection = (treeA, treeB) => {
   let currentA = treeA.head;
   let currentB = treeB.head;
 
-  let i;
+  let i = 0;
   while(currentA){
     hash.set(currentA, i);
     traverse(currentA);
